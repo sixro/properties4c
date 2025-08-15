@@ -5,13 +5,19 @@
 #include <stdlib.h>
 #include <string.h>
 
+#define assert_not_null(a) \
+	if (a == NULL) { \
+		fprintf(stderr, "%s:%d expected: %s to be not NULL\n", __FILE__, __LINE__, #a); \
+		abort(); \
+	}
+
 #define assert_eq(a, b) \
 	if (a != b) { \
 		fprintf(stderr, "%s:%d expected: %s but was: %s\n", __FILE__, __LINE__, #a, #b); \
 		abort(); \
 	}
 
-#define assert_eqs(a, b) \
+#define assert_eq_str(a, b) \
 	if (strcmp(a, b) != 0) { \
 		fprintf(stderr, "%s:%d expected: \"%s\" but was: \"%s\"\n", __FILE__, __LINE__, a, b); \
 		abort(); \

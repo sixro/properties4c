@@ -13,9 +13,9 @@ done)
 %.o: %.c
 	$(CC) -c -o $@ $< $(CFLAGS)
 
-run-tests: test_properties4c.o
+run-tests: $(TEST_FILES) $(OBJECT_FILES)
 	mkdir -p bin
-	gcc -o bin/test_properties4c test_properties4c.o
+	$(CC) -o bin/test_properties4c $^ $(CFLAGS)
 	./bin/test_properties4c
 
 .PHONY: clean
