@@ -1,4 +1,4 @@
-CC=gcc-15
+#CC=gcc-15
 CFLAGS=-Wall -Werror -Wunused-macros -std=c89 -pedantic
 #EXEC=myapp
 
