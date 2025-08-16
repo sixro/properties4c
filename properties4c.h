@@ -1,8 +1,6 @@
 #ifndef PROPERTIES4C_H
 #define PROPERTIES4C_H
 
-#include <stdio.h>
-
 typedef struct Properties Properties;
 
 /*
@@ -11,7 +9,7 @@ typedef struct Properties Properties;
  * Returns NULL if the memory cannot be allocated correctly.
  * Call props_free to free the memory allocated.
  */
-Properties * props_create(FILE *file);
+Properties * props_create(const char *filepath);
 
 /*
  * Returns the value of the specified key found in the specified properties.

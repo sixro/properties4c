@@ -11,6 +11,12 @@
 		abort(); \
 	}
 
+#define assert_null(a) \
+	if (a != NULL) { \
+		fprintf(stderr, "%s:%d expected: %s to be NULL\n", __FILE__, __LINE__, #a); \
+		abort(); \
+	}
+
 #define assert_eq(a, b) \
 	if (a != b) { \
 		fprintf(stderr, "%s:%d expected: %s but was: %s\n", __FILE__, __LINE__, #a, #b); \
