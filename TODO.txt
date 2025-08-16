@@ -1,6 +1,8 @@
 
                                  T O D O s
 
+  o Test for empty lines
+  o Test for wrong properties definition like having no '=' separator
   o Review TODOs in code
   o Reorganize  project  in  order  to have all code under src folder and the
     compiled  objects under bin folder, so that the root folder remains clean
